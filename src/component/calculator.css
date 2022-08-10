@@ -1,63 +1,62 @@
-body{
-    background-color: brown;
+body {
+  background-color: brown;
 }
 
-.mainContainer{
-    display: flex;
-    flex-direction: column;
-    margin:15% 30%;
-    width: 40%;
- }
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 15% 30%;
+  width: 40%;
+}
 
-.fox{
+.fox {
   color: blue;
 }
 
-.inputResult{
-    width: 23.75rem;
-    padding: 0.5rem;
-    background-color: gray;
-    color: white;
+.inputResult {
+  width: 23.75rem;
+  padding: 0.5rem;
+  background-color: gray;
+  color: white;
 }
 
-.pressValue{
-    display: flex;
+.pressValue {
+  display: flex;
 }
 
-.pressValue p{
-    background-color: antiquewhite;
-    border: 1px solid gainsboro;
-    width: 25%;
-    text-align: center;
-    cursor: pointer;
-    padding: 0.3rem 0rem;
-    margin: 0rem;
+.pressValue p {
+  background-color: antiquewhite;
+  border: 1px solid gainsboro;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  margin: 0;
 }
 
-.pressValue .orange{
-    background-color: orange;
+.pressValue .orange {
+  background-color: orange;
 }
 
-.zero{
-    flex-grow: 1;
-    
+.zero {
+  flex-grow: 1;
 }
 
 input[type="text"]::placeholder {
-    text-align: right;
-    color: white;
-    font-weight: 500;
-    font-size: large;
+  text-align: right;
+  color: white;
+  font-weight: 500;
+  font-size: large;
 }
 
-.calculateDiv{
-    width: 25rem;
+.calculateDiv {
+  width: 25rem;
 }
 
-.pressValue .dot{
-    width: 24.5%;
+.pressValue .dot {
+  width: 24.5%;
 }
 
-.pressValue .equalto{
-    width: 24.5%;
+.pressValue .equalto {
+  width: 24.5%;
 }
