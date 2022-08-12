@@ -1,13 +1,14 @@
+/* eslint-disable react/function-component-definition */
 import React, { useState } from 'react';
 import './calculator.css';
 import calculate from '../logic/calculate';
 
-function Calculator() {
+const Calculator = () => {
   const [state, setState] = useState({ total: null, next: null, operation: null });
 
-  function handleClicks(e) {
+  const handleClicks = (e) => {
     setState((prevState) => ({ ...prevState, ...calculate(prevState, e.target.textContent) }));
-  }
+  };
 
   return (
     <div className="mainContainer">
@@ -21,7 +22,7 @@ function Calculator() {
           <button type="button" onClick={handleClicks}>AC</button>
           <button type="button" onClick={handleClicks}>+/-</button>
           <button type="button" onClick={handleClicks}>%</button>
-          <button type="button" onClick={handleClicks} className="orange">+</button>
+          <button type="button" onClick={handleClicks} className="orange">÷</button>
         </div>
         <div className="pressValue">
           <button type="button" onClick={handleClicks}>7</button>
@@ -49,6 +50,6 @@ function Calculator() {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
