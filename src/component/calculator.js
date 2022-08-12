@@ -27,7 +27,7 @@ function Calculator() {
           <button type="button" onClick={handleClicks}>7</button>
           <button type="button" onClick={handleClicks}>8</button>
           <button type="button" onClick={handleClicks}>9</button>
-          <button type="button" onClick={handleClicks} className="orange">X</button>
+          <button type="button" onClick={handleClicks} className="orange">x</button>
         </div>
         <div className="pressValue">
           <button type="button" onClick={handleClicks}>4</button>
