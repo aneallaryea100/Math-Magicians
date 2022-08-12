@@ -5,35 +5,24 @@ import calculate from '../logic/calculate';
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
+    this.state = {};
 
     this.handleClicks = this.handleClicks.bind(this);
   }
 
   handleClicks = (e) => {
-    const { data } = this.state;
-    const result = calculate(data, e.target.textContent);
-    this.setState({ data: result });
-    // this.setState((prevState) => (calculate(prevState, e.target.textContent)));
-    // nullState() ? '0' : result
+    this.setState((state) => calculate(state, e.target.textContent));
   };
 
   render() {
-    const { total, next, operation } = this.state;
-    const nullState = () => !total && !next && !operation;
-    const result = () => {
-      if (operation) return `${total} ${operation} ${next || ''}`;
-      return next || total;
-    };
+    const { next, operation, total } = this.state;
     return (
       <div className="mainContainer">
         <div className="calculateDiv">
           <div>
-            <div type="text" className="inputResult">{nullState() ? '0' : result}</div>
+            <div type="text" className="inputResult">
+              {next || operation || total || 0}
+            </div>
           </div>
           <div className="pressValue">
             <button type="button" onClick={this.handleClicks}>AC</button>
