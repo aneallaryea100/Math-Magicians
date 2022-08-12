@@ -1,47 +1,57 @@
 import React from 'react';
 import './calculator.css';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleClicks = this.handleClicks.bind(this);
   }
 
+  handleClicks = (e) => {
+    this.setState((state) => calculate(state, e.target.textContent));
+  };
+
   render() {
+    const { next, operation, total } = this.state;
     return (
       <div className="mainContainer">
         <div className="calculateDiv">
           <div>
-            <input type="text" className="inputResult" placeholder="0" disabled />
+            <div type="text" className="inputResult">
+              {next || operation || total || 0}
+            </div>
           </div>
           <div className="pressValue">
-            <p>AC</p>
-            <p>+/-</p>
-            <p>%</p>
-            <p className="orange">+</p>
+            <button type="button" onClick={this.handleClicks}>AC</button>
+            <button type="button" onClick={this.handleClicks}>+/-</button>
+            <button type="button" onClick={this.handleClicks}>%</button>
+            <button type="button" onClick={this.handleClicks} className="orange">+</button>
           </div>
           <div className="pressValue">
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p className="orange">X</p>
+            <button type="button" onClick={this.handleClicks}>7</button>
+            <button type="button" onClick={this.handleClicks}>8</button>
+            <button type="button" onClick={this.handleClicks}>9</button>
+            <button type="button" onClick={this.handleClicks} className="orange">x</button>
           </div>
           <div className="pressValue">
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p className="orange">-</p>
+            <button type="button" onClick={this.handleClicks}>4</button>
+            <button type="button" onClick={this.handleClicks}>5</button>
+            <button type="button" onClick={this.handleClicks}>6</button>
+            <button type="button" onClick={this.handleClicks} className="orange">-</button>
           </div>
           <div className="pressValue">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p className="orange">+</p>
+            <button type="button" onClick={this.handleClicks}>1</button>
+            <button type="button" onClick={this.handleClicks}>2</button>
+            <button type="button" onClick={this.handleClicks}>3</button>
+            <button type="button" onClick={this.handleClicks} className="orange">+</button>
           </div>
           <div className="pressValue">
-            <p className="zero">0</p>
-            <p className="dot">.</p>
-            <p className="orange equalto">=</p>
+            <button type="button" onClick={this.handleClicks} className="zero">0</button>
+            <button type="button" onClick={this.handleClicks} className="dot">.</button>
+            <button type="button" onClick={this.handleClicks} className="orange equalto">=</button>
           </div>
         </div>
       </div>
