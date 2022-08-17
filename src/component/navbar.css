@@ -1,0 +1,24 @@
+.navholder{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+}
+
+.headText{
+    color: antiquewhite;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ulTag .nav {
+    margin: 0rem 0.9rem;
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
