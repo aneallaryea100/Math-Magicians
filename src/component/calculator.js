@@ -1,52 +1,55 @@
-import React from 'react';
+/* eslint-disable react/function-component-definition */
+import React, { useState } from 'react';
 import './calculator.css';
+import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Calculator = () => {
+  const [state, setState] = useState({ total: null, next: null, operation: null });
 
-  render() {
-    return (
-      <div className="mainContainer">
-        <div className="calculateDiv">
-          <div>
-            <input type="text" className="inputResult" placeholder="0" disabled />
-          </div>
-          <div className="pressValue">
-            <p>AC</p>
-            <p>+/-</p>
-            <p>%</p>
-            <p className="orange">+</p>
-          </div>
-          <div className="pressValue">
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p className="orange">X</p>
-          </div>
-          <div className="pressValue">
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p className="orange">-</p>
-          </div>
-          <div className="pressValue">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p className="orange">+</p>
-          </div>
-          <div className="pressValue">
-            <p className="zero">0</p>
-            <p className="dot">.</p>
-            <p className="orange equalto">=</p>
+  const handleClicks = (e) => {
+    setState((prevState) => ({ ...prevState, ...calculate(prevState, e.target.textContent) }));
+  };
+
+  return (
+    <div className="mainContainer">
+      <div className="calculateDiv">
+        <div>
+          <div type="text" className="inputResult">
+            {state.next || state.operation || state.total || 0}
           </div>
         </div>
+        <div className="pressValue">
+          <button type="button" onClick={handleClicks}>AC</button>
+          <button type="button" onClick={handleClicks}>+/-</button>
+          <button type="button" onClick={handleClicks}>%</button>
+          <button type="button" onClick={handleClicks} className="orange">÷</button>
+        </div>
+        <div className="pressValue">
+          <button type="button" onClick={handleClicks}>7</button>
+          <button type="button" onClick={handleClicks}>8</button>
+          <button type="button" onClick={handleClicks}>9</button>
+          <button type="button" onClick={handleClicks} className="orange">x</button>
+        </div>
+        <div className="pressValue">
+          <button type="button" onClick={handleClicks}>4</button>
+          <button type="button" onClick={handleClicks}>5</button>
+          <button type="button" onClick={handleClicks}>6</button>
+          <button type="button" onClick={handleClicks} className="orange">-</button>
+        </div>
+        <div className="pressValue">
+          <button type="button" onClick={handleClicks}>1</button>
+          <button type="button" onClick={handleClicks}>2</button>
+          <button type="button" onClick={handleClicks}>3</button>
+          <button type="button" onClick={handleClicks} className="orange">+</button>
+        </div>
+        <div className="pressValue">
+          <button type="button" onClick={handleClicks} className="zero">0</button>
+          <button type="button" onClick={handleClicks} className="dot">.</button>
+          <button type="button" onClick={handleClicks} className="orange equalto">=</button>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Calculator;
