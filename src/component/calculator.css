@@ -2,11 +2,22 @@ body {
   background-color: brown;
 }
 
+.overall {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem 10rem;
+}
+
+.headTexts {
+  color: antiquewhite;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
-  margin: 15% 30%;
-  width: 40%;
+
+  /* margin: 15% 30%; */
+  width: 30%;
 }
 
 .fox {
@@ -14,7 +25,7 @@ body {
 }
 
 .inputResult {
-  width: 23.95rem;
+  width: 38.95rem;
   padding: 0.5rem;
   background-color: gray;
   color: white;
@@ -51,7 +62,8 @@ input[type="text"]::placeholder {
 }
 
 .calculateDiv {
-  width: 25rem;
+  width: 40rem;
+  margin: 5rem 2rem 5rem 0;
 }
 
 .pressValue .dot {
@@ -59,5 +71,5 @@ input[type="text"]::placeholder {
 }
 
 .pressValue .equalto {
-  width: 24.5%;
+  width: 25.6%;
 }

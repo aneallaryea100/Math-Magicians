@@ -11,41 +11,44 @@ const Calculator = () => {
   };
 
   return (
-    <div className="mainContainer">
-      <div className="calculateDiv">
-        <div>
-          <div type="text" className="inputResult">
-            {state.next || state.operation || state.total || 0}
+    <div className="overall">
+      <h1 className="headTexts">Let do some Maths</h1>
+      <div className="mainContainer">
+        <div className="calculateDiv">
+          <div>
+            <div type="text" className="inputResult">
+              {state.next || state.operation || state.total || 0}
+            </div>
           </div>
-        </div>
-        <div className="pressValue">
-          <button type="button" onClick={handleClicks}>AC</button>
-          <button type="button" onClick={handleClicks}>+/-</button>
-          <button type="button" onClick={handleClicks}>%</button>
-          <button type="button" onClick={handleClicks} className="orange">÷</button>
-        </div>
-        <div className="pressValue">
-          <button type="button" onClick={handleClicks}>7</button>
-          <button type="button" onClick={handleClicks}>8</button>
-          <button type="button" onClick={handleClicks}>9</button>
-          <button type="button" onClick={handleClicks} className="orange">x</button>
-        </div>
-        <div className="pressValue">
-          <button type="button" onClick={handleClicks}>4</button>
-          <button type="button" onClick={handleClicks}>5</button>
-          <button type="button" onClick={handleClicks}>6</button>
-          <button type="button" onClick={handleClicks} className="orange">-</button>
-        </div>
-        <div className="pressValue">
-          <button type="button" onClick={handleClicks}>1</button>
-          <button type="button" onClick={handleClicks}>2</button>
-          <button type="button" onClick={handleClicks}>3</button>
-          <button type="button" onClick={handleClicks} className="orange">+</button>
-        </div>
-        <div className="pressValue">
-          <button type="button" onClick={handleClicks} className="zero">0</button>
-          <button type="button" onClick={handleClicks} className="dot">.</button>
-          <button type="button" onClick={handleClicks} className="orange equalto">=</button>
+          <div className="pressValue">
+            <button type="button" onClick={handleClicks}>AC</button>
+            <button type="button" onClick={handleClicks}>+/-</button>
+            <button type="button" onClick={handleClicks}>%</button>
+            <button type="button" onClick={handleClicks} className="orange">÷</button>
+          </div>
+          <div className="pressValue">
+            <button type="button" onClick={handleClicks}>7</button>
+            <button type="button" onClick={handleClicks}>8</button>
+            <button type="button" onClick={handleClicks}>9</button>
+            <button type="button" onClick={handleClicks} className="orange">x</button>
+          </div>
+          <div className="pressValue">
+            <button type="button" onClick={handleClicks}>4</button>
+            <button type="button" onClick={handleClicks}>5</button>
+            <button type="button" onClick={handleClicks}>6</button>
+            <button type="button" onClick={handleClicks} className="orange">-</button>
+          </div>
+          <div className="pressValue">
+            <button type="button" onClick={handleClicks}>1</button>
+            <button type="button" onClick={handleClicks}>2</button>
+            <button type="button" onClick={handleClicks}>3</button>
+            <button type="button" onClick={handleClicks} className="orange">+</button>
+          </div>
+          <div className="pressValue">
+            <button type="button" onClick={handleClicks} className="zero">0</button>
+            <button type="button" onClick={handleClicks} className="dot">.</button>
+            <button type="button" onClick={handleClicks} className="orange equalto">=</button>
+          </div>
         </div>
       </div>
     </div>
