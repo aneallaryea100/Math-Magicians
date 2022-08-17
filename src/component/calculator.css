@@ -2,18 +2,19 @@ body {
   background-color: brown;
 }
 
-.overall{
+.overall {
   display: flex;
   justify-content: space-around;
 }
 
-.headTexts{
+.headTexts {
   color: antiquewhite;
 }
 
 .mainContainer {
   display: flex;
   flex-direction: column;
+
   /* margin: 15% 30%; */
   width: 30%;
 }
@@ -61,7 +62,7 @@ input[type="text"]::placeholder {
 
 .calculateDiv {
   width: 40rem;
-  margin: 5rem 2rem 5rem 0rem;
+  margin: 5rem 2rem 5rem 0;
 }
 
 .pressValue .dot {
