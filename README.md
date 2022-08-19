@@ -10,8 +10,11 @@ This project is about using calculators. It is a project aimed at teaching micro
 - React
 
 ## Live Demo
-
+* Netlify link
 [Live Demo Link](https://cool-mochi-15892a.netlify.app/)
+
+* Heroku link
+[Live Demo Link](https://math-aneal.herokuapp.com/)
 
 # Prerequisite
 * Modern Browser.Example: Firefox, chrome.
