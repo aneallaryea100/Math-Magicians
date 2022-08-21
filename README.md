@@ -1,20 +1,20 @@
 # MATH MAGICIANS
 
 # DESCRIPTION
-This pull requests is about the set up of reacts.
+This project is about using calculators. It is a project aimed at teaching microverse student how to implement react functionality. It is a single app application with a Home section, calculator section and Quote section.
 
 ## Built With
 
 - HTML
 - CSS
-- JAVASCRIPT
-- VSCODE
-- Webpack
 - React
 
 ## Live Demo
+* Netlify link
+[Live Demo Link](https://cool-mochi-15892a.netlify.app/)
 
-[Live Demo Link]()
+* Heroku link
+[Live Demo Link](https://math-aneal.herokuapp.com/)
 
 # Prerequisite
 * Modern Browser.Example: Firefox, chrome.
@@ -25,7 +25,7 @@ This pull requests is about the set up of reacts.
 
 
 # SET UP
-* Clone this repo : https://github.com/aneallaryea100/Leaderboard.git
+* Clone this repo : https://github.com/aneallaryea100/Math-Magicians.git
 * Run npm install if you don't have node.js installed it on your computer.
 * Run npm run build and npm start in your terminal to get the project running.
 
