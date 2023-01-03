@@ -9,6 +9,10 @@ This project is about using calculators. It is a project aimed at teaching micro
 - CSS
 - React
 
+## Image Preview 
+![math magician](./src/images/magicmath.png)
+
+
 ## Live Demo
 * Netlify link
 [Live Demo Link](https://cool-mochi-15892a.netlify.app/)
