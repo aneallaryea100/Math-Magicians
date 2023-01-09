@@ -10,7 +10,7 @@ This project is about using calculators. It is a project aimed at teaching micro
 - React
 
 ## Image Preview 
-![math magician](./src/images/magicmath.png)
+![math magician](./src/images/mathtatenda.png)
 
 
 ## Live Demo
